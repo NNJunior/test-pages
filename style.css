@@ -1,0 +1,363 @@
+/* style.css – общие стили для всех страниц конспектов */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f3f6fc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1a2b3e;
+  padding: 2rem 1rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+/* ---------- header / навигация ---------- */
+.page-header {
+  margin-bottom: 2.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.page-header h1 {
+  font-size: 2.2rem;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: #0b2b40;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.back-link {
+  background: #deecf0;
+  padding: 0.5rem 1.2rem;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1e5668;
+  text-decoration: none;
+  border: 1px solid #bfd7de;
+  transition: background 0.15s;
+}
+
+.back-link:hover {
+  background: #c8dbe0;
+  color: #0a3a44;
+}
+
+.subhead {
+  color: #3a5e6e;
+  font-size: 1.1rem;
+  margin-top: 0.3rem;
+  border-left: 5px solid #548ea0;
+  padding-left: 1.2rem;
+  background: rgba(84, 142, 160, 0.06);
+  border-radius: 0 12px 12px 0;
+  line-height: 1.5;
+  width: 100%;
+}
+
+/* ---------- карточки семестров (на главной) ---------- */
+.semester-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.semester-card {
+  background: white;
+  border-radius: 28px;
+  padding: 1.8rem 1.5rem;
+  box-shadow: 0 8px 18px rgba(0, 20, 30, 0.05);
+  border: 1px solid #e7edf2;
+  transition: transform 0.1s ease, box-shadow 0.2s, border-color 0.1s;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.semester-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 28px rgba(28, 75, 95, 0.08);
+  border-color: #b6d2db;
+}
+
+.semester-card h2 {
+  font-size: 1.9rem;
+  font-weight: 650;
+  color: #144a5e;
+  margin-bottom: 0.6rem;
+  line-height: 1.2;
+}
+
+.semester-date {
+  background: #e1ecf0;
+  padding: 0.3rem 1rem;
+  border-radius: 40px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #154c5c;
+  display: inline-block;
+  align-self: flex-start;
+  margin-bottom: 1rem;
+  border: 1px solid #c6d6dd;
+}
+
+.semester-stats {
+  margin-top: auto;
+  color: #2c5f73;
+  font-size: 0.95rem;
+  border-top: 1px solid #dce7ed;
+  padding-top: 1rem;
+  font-weight: 500;
+}
+
+/* ---------- оформление страницы семестра ---------- */
+.semester-page {
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 8px 22px rgba(0,20,30,0.06);
+  padding: 2rem 2.2rem;
+  margin-top: 1rem;
+  border: 1px solid #e7edf2;
+}
+
+.semester-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #dce7ed;
+  padding-bottom: 1rem;
+}
+
+.semester-name {
+  font-size: 2rem;
+  font-weight: 650;
+  color: #144a5e;
+  letter-spacing: -0.01em;
+}
+
+.semester-date-large {
+  background: #e1ecf0;
+  padding: 0.4rem 1.4rem;
+  border-radius: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1e5668;
+  border: 1px solid #bfd7de;
+}
+
+/* ---------- карточка предмета ---------- */
+.subject {
+  background: #f9fcff;
+  border-left: 6px solid #357a8c;
+  border-radius: 18px;
+  padding: 1.6rem 1.8rem 1.3rem;
+  margin-top: 2rem;
+  margin-bottom: 1.8rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+}
+
+.subject:first-of-type {
+  margin-top: 0.5rem;
+}
+
+.subject-title {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.subject-title h3 {
+  font-size: 1.7rem;
+  font-weight: 620;
+  color: #0a3140;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.subject-id {
+  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 0.75rem;
+  background: #d1e0e8;
+  color: #1c4b5c;
+  padding: 0.2rem 0.8rem;
+  border-radius: 30px;
+  font-weight: 500;
+  border: 1px solid #acc6cf;
+}
+
+.subject-description {
+  margin: 0.9rem 0 0.9rem 0;
+  padding: 0.8rem 1.2rem;
+  background: #e9f2f5;
+  border-radius: 16px;
+  color: #14404e;
+  font-size: 1rem;
+  border-left: 3px solid #548ea0;
+  word-break: break-word;
+}
+
+.subject-description a {
+  color: #176577;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  font-weight: 500;
+}
+
+.subject-setting {
+  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 0.8rem;
+  color: #2e5a68;
+  background: #deecf0;
+  padding: 0.3rem 0.9rem;
+  border-radius: 18px;
+  display: inline-block;
+  margin-top: 0.2rem;
+  word-break: break-word;
+  max-width: 100%;
+  border: 1px solid #c8d8df;
+}
+
+/* ---------- список лекций ---------- */
+.lecture-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.4rem;
+  border-top: 1px solid #cbd8df;
+  padding-top: 0.3rem;
+}
+
+.lecture-item {
+  padding: 1rem 0.3rem 0.9rem 0.3rem;
+  border-bottom: 1px solid #dfeaef;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  transition: background 0.06s;
+}
+
+.lecture-item:hover {
+  background: #f2f9fd;
+}
+
+.lecture-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem 1.2rem;
+  width: 100%;
+}
+
+.lecture-name {
+  font-weight: 670;
+  font-size: 1.12rem;
+  color: #073642;
+}
+
+.lecture-date {
+  background: #e1eaee;
+  padding: 0.2rem 1rem;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #154c5c;
+  letter-spacing: 0.3px;
+  border: 1px solid #c6d6dd;
+}
+
+.lecture-description {
+  width: 100%;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  padding: 0.6rem 1rem;
+  background: #f4fafc;
+  border-radius: 12px;
+  color: #1f4b59;
+  font-size: 0.96rem;
+  border-left: 3px solid #74a5b3;
+  word-break: break-word;
+}
+
+.lecture-description a {
+  color: #1e6d7c;
+  text-decoration: underline;
+  text-decoration-color: #99c2cc;
+  text-underline-offset: 3px;
+  font-weight: 550;
+}
+
+.lecture-path {
+  font-family: 'SF Mono', 'Menlo', 'Consolas', monospace;
+  font-size: 0.8rem;
+  background: #e7edf2;
+  padding: 0.25rem 0.9rem;
+  border-radius: 24px;
+  color: #205b6b;
+  margin-top: 0.25rem;
+  word-break: break-word;
+  border: 1px solid #c8d8df;
+}
+
+.no-lecture {
+  padding: 1.3rem 1rem;
+  background: #edf3f7;
+  border-radius: 16px;
+  color: #316a7a;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  border: 1px dashed #7fa3ae;
+  margin: 0.8rem 0;
+}
+
+.missing {
+  color: #964b4b;
+  background: #ffe2dd;
+  padding: 0.15rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 0.7rem;
+  border: 1px solid #e6b3af;
+  display: inline-block;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #d2e0e5;
+  margin: 1rem 0;
+}
+
+/* ---------- адаптивность ---------- */
+@media (max-width: 700px) {
+  body { padding: 1.2rem; }
+  .semester-page { padding: 1.5rem; }
+  .subject { padding: 1.2rem; }
+  .semester-name { font-size: 1.7rem; }
+  .subject-title h3 { font-size: 1.5rem; }
+  .page-header h1 { font-size: 1.8rem; }
+}
+
+@media (max-width: 480px) {
+  .semester-card h2 { font-size: 1.6rem; }
+  .lecture-main { gap: 0.4rem; }
+  .lecture-name { font-size: 1rem; }
+}
